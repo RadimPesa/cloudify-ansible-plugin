@@ -25,5 +25,5 @@ setup(
     packages=['ansible_plugin'],
     license='LICENSE',
     zip_safe=False,
-    install_requires=["cloudify-plugins-common==3.4a2", "ansible==2.0.1.0"]
+    install_requires=["cloudify-plugins-common", "ansible"]
 )
