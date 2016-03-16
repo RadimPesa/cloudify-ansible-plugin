@@ -37,7 +37,13 @@ def get_playbook_path(playbook):
 
     return path_to_file
 
-
+#This fuction is modified to take hosts file path.
+#This enables to maintain a single hosts file with all the inventory grouped.
+#Please note even though the inventory is list only the first value is used.
+#In the below eg only the first path will be taken second is ignored
+#Eg: inventory:
+#         - <PATH 1 TO HOSTS FILE>
+#         - <PATH 2 TO HOSTS FILE>
 def get_inventory_path(inventory):
 
     if not inventory:
