@@ -50,17 +50,10 @@ def configure(user=None, key=None, **kwargs):
 
 @operation
 def ansible_playbook(playbooks, inventory=list(), **kwargs):
-"""def ansible_playbook(playbooks, inventory, **kwargs):"""
     """ Runs a playbook as part of a Cloudify lifecycle operation """
 
     inventory_path = utils.get_inventory_path(inventory)
     ctx.logger.info('Inventory path: {0}.'.format(inventory_path))
-    
-    "Except inventory path instead of list"
-    '''
-    inventory_path = inventory[0]
-    ctx.logger.info('Inventory path: {0}.'.format(inventory_path))
-    '''
 
     for playbook in playbooks:
         playbook_path = utils.get_playbook_path(playbook)
