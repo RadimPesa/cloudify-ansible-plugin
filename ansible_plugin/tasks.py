@@ -31,6 +31,7 @@ def configure(user=None, key=None, **kwargs):
     agent_key_path = utils.get_keypair_path(key)
 
     configuration = '[defaults]\n' \
+                    'inventory=/home/vagrant/cloudify/blueprints/supervisor/resources/hosts\n' \
                     'host_key_checking=False\n' \
                     'private_key_file={0}\n'.format(agent_key_path)
 
