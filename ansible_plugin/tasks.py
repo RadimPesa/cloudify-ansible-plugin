@@ -58,7 +58,7 @@ def ansible_playbook(playbooks, inventory, **kwargs):
     ctx.logger.info('Inventory path: {0}.'.format(inventory_path))
     '''
     "Except inventory path instead of list"
-    inventory_path = inventory
+    inventory_path = inventory[0]
     ctx.logger.info('Inventory path: {0}.'.format(inventory_path))
 
     for playbook in playbooks:
