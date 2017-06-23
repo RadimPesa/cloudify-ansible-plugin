@@ -51,12 +51,9 @@ def get_inventory_path(inventory):
 
     _, path_to_file = tempfile.mkstemp()
 
-    in_file = open(inventory[0])
-    indata = in_file.read()
-    out_file = open(path_to_file, 'w')
-    out_file.write(indata)
-    out_file.close()
-    in_file.close()
+    with open(path_to_file, 'w') as f:
+        for host in inventory:
+            f.write('{0}\n'.format(host))
 
     return path_to_file
 
